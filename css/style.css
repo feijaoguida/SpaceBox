@@ -11,7 +11,8 @@
 }
 
 .header {
-  background-image: linear-gradient(to right, rgb(0, 238, 255) , rgb(0, 40, 61));
+  background-image: linear-gradient(90deg, #4dd1d1 0%, #092331 100%);
+  
   width: 100%;
 }
 body {
@@ -19,9 +20,9 @@ body {
 }
 
 nav {
-  height: 80px;
+  height: 120px;
   width: 100%;
-  max-width: 920px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
@@ -56,7 +57,7 @@ nav ul li a{
 }
 
 a.active, a:hover{
-  background: #1b9bff;
+  background: #8acdff;
   transition: .5s;
 }
 
@@ -120,4 +121,41 @@ a.active, a:hover{
   }
 }
 
+.mainBox{
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 200px;
+  filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.2));
+  background-color: #f0f1ef;
 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mainBox > img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 20px
+}
+
+.bio > p {
+  font-size: 20px;
+color: #707070;
+font-weight: 400;
+font-family: "Open Sans";
+text-align: left;
+}
+
+.bio > p > span {
+  font-size: 24px;
+color: #092432;
+font-weight: 700;
+font-family: "Open Sans";
+}
+
+.containerBody {
+  width: 100%;
+  margin-top: 15px;
+}
