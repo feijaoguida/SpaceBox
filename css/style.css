@@ -4,6 +4,7 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+
 }
 
 .container {
@@ -13,10 +14,11 @@
 .header {
   background-image: linear-gradient(90deg, #4dd1d1 0%, #092331 100%); 
   width: 100%;
-  margin: 0 15px;
+  margin: 0;
 }
 body {
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden; 
 }
 
 nav {
