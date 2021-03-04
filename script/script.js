@@ -14,7 +14,7 @@ function displaylist(data) {
         <img src="./assets/${item.foto}" alt="">
         <div class="bioBox">
           <p>${item.nome}</p>
-          <p>${item.cargo}</p>
+          <p>${item.cargo}</p> 
         </div>
       </li>
     `

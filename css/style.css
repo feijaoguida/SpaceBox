@@ -11,7 +11,7 @@
 }
 
 .header {
-  background-image: linear-gradient(90deg, #4dd1d1 0%, #092331 100%);
+  background-image: linear-gradient(90deg, #4dd1d1 0%, #092331 100%); 
   width: 100%;
   margin: 0 15px;
 }
