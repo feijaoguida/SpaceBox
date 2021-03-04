@@ -8,10 +8,9 @@ async function fetchData() {
 fetchData().then(displaylist)
 
 function displaylist(data) {
-  console.log("data, ", data)
   const listHTML = data.map(item => 
     `
-      <li class="box">
+      <li data-id='${item.id}' data-idade='${item.idade}' data-nome='${item.nome}' data-cargo='${item.cargo}' data-foto='${item.foto}' class="box">
         <img src="./assets/${item.foto}" alt="">
         <div class="bioBox">
           <p>${item.nome}</p>
@@ -20,24 +19,28 @@ function displaylist(data) {
       </li>
     `
   ).join('');
-  console.log("listHTML ", listHTML)
   contentList.innerHTML = listHTML
 }
 
+const cardBio = document.getElementById('cardBio');
+document.addEventListener('click', function (event) {
+  if (!event.target.matches('.box')) return;
+  event.preventDefault();
+  
+  var id = event.target.getAttribute("data-id");
+  var nome = event.target.getAttribute("data-nome");
+  var cargo = event.target.getAttribute("data-cargo");
+  var idade = event.target.getAttribute("data-idade");
+  var foto = event.target.getAttribute("data-foto");
 
+  const cardBio1 = `
+    <img src="./assets/${foto}" alt="">
+        <div class="bio">
+          <p>NOME: <span>${nome} </span></p>
+          <p>CARGO: <span> ${cargo} </span></p>
+          <p>IDADE: <span> ${idade} </span></p>
+        </div>
+  `;
+  cardBio.innerHTML = cardBio1
 
-/* const displayPokemon = (pokemon) => {
-    const pokemonHTMLString = pokemon
-        .map(
-            (pokeman) => `
-        <li class="card">
-            <img class="card-image" src="${pokeman.image}"/>
-            <h2 class="card-title">${pokeman.id}. ${pokeman.name}</h2>
-            <p class="card-subtitle">Type: ${pokeman.type}</p>
-        </li>
-    `
-        )
-        .join('');
-    contentList.innerHTML = pokemonHTMLString;
-}; */
-
+}, false);
