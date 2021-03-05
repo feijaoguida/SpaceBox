@@ -33,6 +33,7 @@ label.logo {
   font-size: 35px;
   line-height: 80px;
   padding: 0;
+  margin-left: 15px;
 }
 
 nav ul {
@@ -172,17 +173,18 @@ a.active, a:hover{
 }
 
 .listBox {
-  margin-top: 10px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   flex-flow: wrap;
   
   width: 100%;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .box {
-  margin-top: 12px;
+  
   min-width: 345px;
   flex: 1;
   height: 160px;

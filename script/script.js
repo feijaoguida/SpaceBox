@@ -34,6 +34,7 @@ document.addEventListener('click', function (event) {
   var foto = event.target.getAttribute("data-foto");
 
   const cardBio1 = `
+  
     <img src="./assets/${foto}" alt="">
         <div class="bio">
           <p>NOME: <span>${nome} </span></p>
